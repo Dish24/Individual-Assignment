@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Noel - Education</title>
+    <link rel="shortcut Icon" type="image/png"
+	href="IvanWebsite.png">
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            background-image: url('Website Background.png');
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #f5f7f6;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a.active {
+            color: gray;
+        }
+
+        .section-header {
+            position: relative;
+            text-align: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px black;
+            overflow: hidden;
+        }
+
+        .section-header img {
+            width: 100%;
+            height: auto;
+            filter: brightness(0.4);
+        }
+
+        .section-header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+        }
+
+        .education-box {
+            position: relative;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 1200px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .education-box:hover {
+            transform: scale(1.05);
+            filter: brightness(0.8);
+        }
+
+        .education-box img {
+            position: absolute;
+            top: 50%;
+            left: 80px;
+            transform: translateY(-50%);
+            width: 220px;
+            height: 220px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-box .education-text {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        /* Style each box individually*/
+        .education-box.sk-green-road .education-text {
+            right: 350px;
+        }
+
+        .education-box.smk-green-road .education-text {
+            right: 310px;
+        }
+
+        .education-box.uitm .education-text {
+            right: 60px;
+            font-size: 55px;
+        }
+
+        footer {
+            background-color: #f5f7f6;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: black;
+            margin-top: 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .drawer {
+            display: none;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-top: 1px solid #e0e0e0;
+            color: #333;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .drawer.open {
+            display: block;
+        }
+
+        .drawer table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .drawer th, .drawer td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .drawer th {
+            background-color: #e0e0e0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="IvanProfile.jpg" alt="Profile Picture">
+    <h2>Ivan Noel</h2>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Biodata.html">Biodata</a>
+        <a href="Experience.html">Experience</a>
+        <a href="Education.html" class="active">Education</a>
+        <a href="Family.html">Family</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="section-header">
+    <img src="Education Header.jpg" alt="Education Header">
+    <h1>EDUCATION</h1>
+</div>
+
+<div class="education-box sk-green-road" style="background-image: url('SKGreenRoad.jpg');" onclick="toggleDrawer('drawer1')">
+    <img src="Logo SKGreenRoad.png" alt="School Logo">
+    <div class="education-text">
+        SK GREEN ROAD <br> (2011 - 2016)
+    </div>
+</div>
+<div id="drawer1" class="drawer">
+    <table>
+        <tr>
+            <th>Grades</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>2</td>
+        </tr>
+    </table>
+</div>
+
+<div class="education-box smk-green-road" style="background-image: url('SMKGreenRoad.png');" onclick="toggleDrawer('drawer2')">
+    <img src="Logo SMKGreenRoad.png" alt="School Logo">
+    <div class="education-text">
+        SMK GREEN ROAD <br> (2017 - 2022)
+    </div>
+</div>
+<div id="drawer2" class="drawer">
+    <table>
+        <tr>
+            <th>Grades</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>A-</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>B+</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>1</td>
+        </tr>
+    </table>
+</div>
+
+<div class="education-box uitm" style="background-image: url('UITM.png');" onclick="toggleDrawer('drawer3')">
+    <img src="Logo UITM.png" alt="School Logo">
+    <div class="education-text">
+        UiTM KAMPUS SAMARAHAN <br> (Pending)
+    </div>
+</div>
+<div id="drawer3" class="drawer">
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Current CGPA</th>
+        </tr>
+        <tr>
+            <td>Diploma In Information Management</td>
+            <td>3.32</td>
+        </tr>
+    </table>
+</div>
+
+<footer>
+    <p>This Website is Developed to Fullfil The Requiremenet for IMD318  © Dictrich Dana Anak Degaulle (2022659594)</p>
+</footer>
+
+<script>
+    function toggleDrawer(drawerId) {
+        const drawer = document.getElementById(drawerId);
+        drawer.classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Noel - Family</title>
+    <link rel="shortcut Icon" type="image/png"
+	href="IvanWebsite.png">
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            background-image: url('Website Background.png');
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #f5f7f6;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a.active {
+            color: gray;
+        }
+
+        .container {
+            padding: 20px 40px;
+        }
+
+        .family-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .family-section .text-content {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+        }
+
+        .family-section .text-content h1 {
+            font-size: 58px;
+            margin: 0;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .family-section .text-content p {
+            font-size: 16px;
+            text-align: justify;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .family-section .main-image {
+            flex: 2;
+            max-width: 900px;
+        }
+
+        .family-section .main-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 49%;
+            margin: 0 1%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-button {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .gallery-button button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 30px 178px;
+            font-size: 28px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .gallery-button button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: #f5f7f6;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: black;
+            margin-top: 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="IvanProfile.jpg" alt="Profile Picture">
+        <h2>Ivan Noel</h2>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="Biodata.html">Biodata</a>
+            <a href="Experience.html">Experience</a>
+            <a href="Education.html">Education</a>
+            <a href="Family.html" class="active">Family</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="family-section">
+            <div class="text-content">
+                <h1>IVAN's FAMILY</h1>
+                <p>Ivan is raised in a family of five, with his parents and his sister. His dad, Edward Sio, is a driving instructor, while his mom Kay Supit is a Senior Sales Manager in Citadines Hotel, Kuching. His sister Erwina Angel, on the other hand, currently following Ivan’s footsteps by studying at the same school that Ivan used to study at, which is Sekolah Menengah Kebangsaan Green Road.</p>
+                <div class="gallery-button">
+                    <button> Visit Gallery</button>
+                </div>
+            </div>
+            <div class="main-image">
+                <img src="IvanFamily.jpg" alt="Ivan's Family">
+            </div>
+        </div>
+        <div class="gallery">
+            <img src="IvanFamily2.jpg" alt="Family Photo 1">
+            <img src="IvanFamily3.jpg" alt="Family Photo 2">
+        </div>
+    </div>
+
+    <footer>
+        <p>This Website is Developed to Fullfil The Requiremenet for IMD318  © Dictrich Dana Anak Degaulle (2022659594)</p>
+    </footer>
+
+</body>
+</html>

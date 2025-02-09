@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Noel - Gallery</title>
+    <link rel="shortcut Icon" type="image/png"
+	href="IvanWebsite.png">
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            background-image: url('Website Background.png');
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #f5f7f6;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a.active {
+            color: gray;
+        }
+
+        .container {
+            padding: 5px 40px;
+        }
+
+        .gallery-section {
+            margin-top: 20px;
+        }
+
+        .gallery-section h1 {
+            font-size: 84px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+        .carousel .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .carousel .arrow.left {
+            left: 10px;
+        }
+
+        .carousel .arrow.right {
+            right: 10px;
+        }
+
+        .image-boxes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .image-boxes img {
+            width: calc(14% - 10px);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .image-boxes img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.8);
+            cursor: pointer;
+        }
+
+        .image-boxes2 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .image-boxes2 img {
+            width: calc(35% - 10px);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .image-boxes2 img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.8);
+            cursor: pointer;
+        }
+
+        .main-video {
+            position: relative;
+            max-width: 70%;
+            margin: 20px auto;
+        }
+
+        .main-video video {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #f5f7f6;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: black;
+            margin-top: 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="IvanProfile.jpg" alt="Profile Picture"> 
+        <h2>Ivan Noel</h2>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="Biodata.html">Biodata</a>
+            <a href="Experience.html">Experience</a>
+            <a href="Education.html">Education</a>
+            <a href="Family.html">Family</a>
+            <a href="Gallery.html" class="active">Gallery</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="gallery-section">
+            <h1>PERSONAL GALLERY</h1>
+            <div class="carousel">
+                <button class="arrow left" onclick="prevSlide()">&lt;</button>
+                <img src="IvanCarousel.jpg" class="active" alt="Main Carousel Image 1">
+                <img src="IvanCarousel2.jpg" alt="Main Carousel Image 2">
+                <img src="IvanCarousel3.jpg" alt="Main Carousel Image 3">
+                <img src="IvanCarousel4.jpg" alt="Main Carousel Image 4">
+                <button class="arrow right" onclick="nextSlide()">&gt;</button>
+            </div>
+            <div class="image-boxes">
+                <img src="IvanGallery1.jpg" alt="Gallery Image 1" onclick="openModal(this)">
+                <img src="IvanGallery2.jpg" alt="Gallery Image 2" onclick="openModal(this)">
+                <img src="IvanGallery3.jpg" alt="Gallery Image 3" onclick="openModal(this)">
+                <img src="IvanGallery4.jpg" alt="Gallery Image 4" onclick="openModal(this)">
+                <img src="IvanGallery5.jpg" alt="Gallery Image 5" onclick="openModal(this)">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="gallery-section">
+            <h1>IVAN'S WORKS</h1>
+            <div class="main-video">
+                <video controls autoplay muted="true">
+                <source src="Droneshot.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video> 
+            </div>
+            <div class="image-boxes">
+                <img src="IvanWork1.jpg" alt="Gallery Image 1" onclick="openModal(this)">
+                <img src="IvanWork2.jpg" alt="Gallery Image 2" onclick="openModal(this)">
+                <img src="IvanWork3.jpg" alt="Gallery Image 3" onclick="openModal(this)">
+                <img src="IvanWork4.jpg" alt="Gallery Image 4" onclick="openModal(this)">
+                <img src="IvanWork5.jpg" alt="Gallery Image 5" onclick="openModal(this)">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="gallery-section">
+            <div class="image-boxes2">
+                <img src="IvanWorkCsl1.jpg" alt="Gallery Image 1" onclick="openModal(this)">
+                <img src="IvanWorkCsl2.jpg" alt="Gallery Image 2" onclick="openModal(this)">
+            </div>
+            <div class="image-boxes2">
+                <img src="IvanWorkCsl3.jpg" alt="Gallery Image 1" onclick="openModal(this)">
+                <img src="IvanWorkCsl4.jpg" alt="Gallery Image 2" onclick="openModal(this)">
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Full Image">
+    </div>
+
+    <footer>
+        <p>This Website is Developed to Fullfil The Requiremenet for IMD318  © Dictrich Dana Anak Degaulle (2022659594)</p>
+    </footer>
+
+    <!-- Javascript for full image view-->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel img');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function openModal(imgElement) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imgElement.src;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
